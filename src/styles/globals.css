@@ -2,26 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: Satoshi;
+  src: url('../fonts/Satoshi-Variable.ttf');
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Satoshi;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.swiper-pagination-bullet {
+  background-color: #777777 !important; 
+  width: 12px !important; 
+  height: 12px !important; 
+  opacity: 1 !important; 
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #F76A0F !important; 
 }
